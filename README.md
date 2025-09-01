@@ -14,7 +14,7 @@ Projeto criado unicamente para estudo pessoal de funções JS, Consumo de Apis e
 
 ## 📸 Demonstração
 
-![SCREENSHOT](./clima/assets/images/Screenshot1.png)
+![SCREENSHOT](./clima/assets/images/Screenshot2.png)
 
 ## 📦 Rodando localmente
 
