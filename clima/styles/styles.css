@@ -1,0 +1,249 @@
+@import url('../assets/fonts/fontes.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url('../assets/images/background-previsao-do-tempo-noite.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conteudo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.card-pesquisa{
+    width: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cidade-pesquisada{
+    width: 70%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    height: 45px;
+    padding-left: 55px;
+    color: #f9f9f9;
+    background-color: rgba(249, 249, 249, 0.44);
+}
+
+.botao-pesquisar{
+    border-radius: 20px;
+    position: absolute;
+    left: 70px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(249, 249, 249, 0.44);
+    display: flex;
+}
+::placeholder{
+    color: #f9f9f9;
+}
+
+.botao-pesquisar img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.informacoes-de-temperatura{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-clima{
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.529);
+    border-radius: 10px;
+    padding: 10px;
+}
+.nome-cidade{
+    color: #f9f9f9;
+    font-size: 0.90rem;
+    font-weight: 600;
+}
+.container-informacoes{
+    display: flex;
+    gap: 15px;
+}
+.informacoes-principais{
+    display: flex;
+    gap: 10px;
+}
+.informacoes-secundarias{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.temperatura{
+    font-size: 4rem;
+    color: #f9f9f9;
+}
+.vento, .humidade, .pressao, .temperatura-minima{
+    display: flex;
+    flex-direction: column;
+    color: #f9f9f9;
+    
+}
+.informacao-vento, .informacao-humidade, .informacao-pressao, .informacao-temperatura-minima{
+    display: flex;
+    align-items: center;
+    color: #f9f9f9;
+}
+.simbolos{
+    font-size: 1.3rem !important;
+    color: #f9f9f9;
+}
+.resposta-servidor{
+    color: #e8e8e8;
+}
+
+.loader {
+  border: 6px solid #f3f3f3; /* cor de fundo */
+  border-top: 6px solid #3498db; /* cor da animação */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  display: none; /* começa escondido */
+  margin: 20px auto; /* centralizado */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 320px) and (max-width: 500px){
+    .card-pesquisa{
+        width: 100%;
+    }
+    .cidade-pesquisada{
+        width: 90%;
+    }
+    .botao-pesquisar{
+        left: 25px;
+    }
+    .informacoes-de-temperatura{
+        width: 100%;
+    }
+    .card-clima{
+        width: 90%;
+    }
+    .container-informacoes{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 690px){
+    .card-pesquisa{
+        width: 100%;
+    }
+    .cidade-pesquisada{
+        width: 90%;
+    }
+    .botao-pesquisar{
+        left: 35px;
+    }
+        .informacoes-de-temperatura{
+        width: 100%;
+    }
+    .card-clima{
+        width: 90%;
+    }
+    .container-informacoes{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (min-width: 690px) and (max-width:830px){
+    .card-pesquisa{
+        width: 100%;
+    }
+    .cidade-pesquisada{
+        width: 90%;
+    }
+    .botao-pesquisar{
+        left: 45px;
+    }
+        .informacoes-de-temperatura{
+        width: 100%;
+    }
+    .card-clima{
+        width: 90%;
+    }
+    .container-informacoes{
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (min-width:830px) and (max-width: 900px){
+    .botao-pesquisar{
+        left: 85px;
+    }
+}
+@media (min-width: 900px) and (max-width: 950px) {
+    .botao-pesquisar{
+        left: 90px;
+    }
+}
+@media (min-width:950px) and (max-width: 1024px){
+    .botao-pesquisar{
+        left: 95px;
+    }
+}
+
+@media (min-width:1024px) and (max-width: 1100px) {
+    .botao-pesquisar{
+        left: 100px;
+    }
+}
+
+@media (min-width:1100px) and (max-width: 1200px){
+    .botao-pesquisar{
+        left: 110px;
+    }
+}
+
+@media (min-width:1200px) and (max-width:1300px){
+    .botao-pesquisar{
+        left: 120px;
+    }
+}
+
+@media (min-width:1300px) and (max-width:1400px){
+    .botao-pesquisar{
+        left: 130px;
+    }
+}
+

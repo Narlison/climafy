@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define a cor da barra do navegador em dispositivos móveis -->
+    <meta name="theme-color" content="#151524">
+    <title>Climafy</title>
+
+    <!-- Estilos do projeto -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="./assets/fonts/fontes.css">
+
+    <!-- Fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones do Google (3 estilos: outlined, rounded, sharp) -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <section class="conteudo">
+            
+            <!-- Área de pesquisa (campo + botão) -->
+            <section class="card-pesquisa">
+                <input type="search" name="cidadePesquisada" id="cidadePesquisada" class="cidade-pesquisada"
+                    placeholder="Busque por uma cidade." autocomplete="off" />
+                <button class="botao-pesquisar" id="botaoPesquisar">
+                    <img src="assets/images/lupa.png" alt="Imagem de lupa, representando pesquisa">
+                </button>
+            </section>
+
+            <!-- Card que mostra informações do clima -->
+            <section class="informacoes-de-temperatura">
+                <section class="card-clima">
+
+                    <!-- Loader (aparece enquanto busca dados da API) -->
+                    <div id="loader" class="loader"></div>
+
+                    <!-- Cabeçalho com o nome da cidade -->
+                    <header class="informacoes-localizacao">
+                        <span>
+                            <p class="nome-cidade poppins-semibold" id="nomeCidade">Ipueiras</p>
+                        </span>
+                    </header>
+
+                    <!-- Container que segura as informações do clima -->
+                    <section class="container-informacoes">
+
+                        <!-- Temperatura principal -->
+                        <section class="informacao-principal-temperatura">
+                            <section class="informacoes-principais">
+                                <h2 class="temperatura poppins-bold" id="temperatura"></h2>
+                            </section>
+                        </section>
+
+                        <!-- Informações secundárias (vento, humidade, pressão, mínima) -->
+                        <section class="informacao-secundaria-temperatura">
+
+                            <section class="informacoes-secundarias">
+                                <section class="vento">
+                                    <p>Vento</p>
+                                    <p class="informacao-vento" id="vento"></p>
+                                </section>
+                                <section class="humidade">
+                                    <p>Humidade</p>
+                                    <p class="informacao-humidade" id="humidade"></p>
+                                </section>
+                            </section>
+
+                            <section class="informacoes-secundarias">
+                                <section class="pressao">
+                                    <p>Pressão</p>
+                                    <p class="informacao-pressao" id="pressao"></p>
+                                </section>
+                                <section class="temperatura-minima">
+                                    <p>Minima</p>
+                                    <p class="informacao-temperatura-minima" id="temperaturaMinima"></p>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+
+<!-- Script principal da aplicação -->
+<script src="scripts/script.js"></script>
+
+</html>
